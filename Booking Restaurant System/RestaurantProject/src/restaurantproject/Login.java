@@ -161,8 +161,9 @@ public class Login extends javax.swing.JFrame {
                     //Mengubah status yang ada di database menjadi '1' yang berarti bahwa akun yang bersangkutan diaktifkan
                     String status = "UPDATE user SET status = '1' WHERE pengunjung_ID = '"+txtID.getText()+"'";
                     int rows = stat.executeUpdate(status);
-                    Restaurant rest = new Restaurant();
-                    rest.setVisible(true);
+                    
+                    menuUtama main = new menuUtama();
+                    main.setVisible(true);
                     this.dispose();
                 }
                 else{
